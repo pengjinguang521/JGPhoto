@@ -1,0 +1,6 @@
+use_frameworks!
+target 'JGPhoto_Tests' do
+  pod 'JGPhoto', :path => '../'
+  
+  
+end
