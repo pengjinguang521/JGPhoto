@@ -1,0 +1,16 @@
+PODS:
+  - JGPhoto (0.1.0)
+
+DEPENDENCIES:
+  - JGPhoto (from `../`)
+
+EXTERNAL SOURCES:
+  JGPhoto:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JGPhoto: b23a33c5710dc24cabbffa15eef82845d2391645
+
+PODFILE CHECKSUM: dc8ace294792b5d0e5a7b537ddea9bc8b44bdc06
+
+COCOAPODS: 1.9.0

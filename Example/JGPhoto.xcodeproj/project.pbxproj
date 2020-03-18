@@ -28,9 +28,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		9A02FA95D521D23F630D2604 /* Pods-JGPhoto_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGPhoto_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JGPhoto_Tests/Pods-JGPhoto_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B582E73372664FD521006A48 /* Pods_JGPhoto_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGPhoto_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F4AA84332BA56B4DE2EC3E /* JGPhoto.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JGPhoto.podspec; path = ../JGPhoto.podspec; sourceTree = "<group>"; };
-		C8FC4EDAA8951DB317553B86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F4D5D1AF042D1322F89D58C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C8F4AA84332BA56B4DE2EC3E /* JGPhoto.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JGPhoto.podspec; path = ../JGPhoto.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C8FC4EDAA8951DB317553B86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F4D5D1AF042D1322F89D58C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,6 @@
 				9A02FA95D521D23F630D2604 /* Pods-JGPhoto_Tests.debug.xcconfig */,
 				02B43D7B0C487A5F9A66CC69 /* Pods-JGPhoto_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,6 +159,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
