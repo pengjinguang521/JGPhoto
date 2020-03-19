@@ -313,4 +313,95 @@
     [_db close];
 }
 
+
+
+#pragma mark - 在实际使用过程中的示范
+
+
+//#pragma mark - 创建数据库 --
+//+ (void)CreateDB{
+////    [[DBSaveHelper sharedHelper] openDB:MM_MarkCardSqlite];
+////    if ( [[DBSaveHelper sharedHelper].db open] ) {
+////        // 已经打开数据了。
+////        return;
+////    }
+//    //打开本地数据库，不存在则创建
+//    [[DBSaveHelper sharedHelper] openDB:MM_MarkCardSqlite];
+//    NSMutableArray * DBArray = [NSMutableArray array];
+//    /** 这边构建本地数据库中的表字段 须与该模型字段  对应 */
+//    /** 这边构建本地数据库 内置ID自增字段      类型text */
+//    [DBArray addObject:@"contentID   TEXT"];
+//    [DBArray addObject:@"nickname    TEXT"];
+//    [DBArray addObject:@"memo        TEXT"];
+//    [DBArray addObject:@"card        TEXT"];  // 背景
+//    [DBArray addObject:@"avatar      TEXT"]; // 头像
+//    [DBArray addObject:@"label       TEXT"]; // 标签
+//    [DBArray addObject:@"qqNumber    TEXT"];
+//    [DBArray addObject:@"userId      TEXT"];
+//    [DBArray addObject:@"userName    TEXT"];
+//    [DBArray addObject:@"isShowDeleteBtn   TEXT"];
+//    [DBArray addObject:@"isDelectSelect    TEXT"];
+//    /** 创建本地数据库表 － TYSX_VideoDownLoadTableName */
+//    [[DBSaveHelper sharedHelper] createTableWithName: MM_MarkCardTableName AndArray:DBArray];
+//}
+//
+//#pragma mark - 写入数据库 --
+//+ (void)InsertModel:(MMJGCardMarkModel*)model{
+//
+//    [MMJGCardMarkModel CreateDB];
+//    /** 传入模型 调用方法即可 完成存储 */
+//    // 这边需要判断对象存不存在
+//    if (model.ID) {
+//        if ([[DBSaveHelper sharedHelper]searchDBWithSql:[NSString stringWithFormat:@"select * from %@ where ID = ?",MM_MarkCardTableName] AndArray:@[model.ID] AndTableName:MM_MarkCardTableName].count == 0) {
+//            [[DBSaveHelper sharedHelper] insertIntoDBWithTableName:MM_MarkCardTableName AndModel:model];
+//        }
+//    }else{
+//         [[DBSaveHelper sharedHelper] insertIntoDBWithTableName:MM_MarkCardTableName AndModel:model];
+//    }
+//
+//}
+//
+//
+//#pragma mark - 查询数据库全部对象 --
+//+ (NSArray *)SearchObjectWithUid:(NSString *)userId ID:(NSInteger)ID{
+//
+//    [MMJGCardMarkModel CreateDB];
+////     return  [MMJGCardMarkModel mj_objectArrayWithKeyValuesArray:[[DBSaveHelper sharedHelper]searchDBWithSql:[NSString stringWithFormat:@"select * from %@ ",MM_MarkCardTableName] AndArray:@[] AndTableName:MM_MarkCardTableName]];
+//
+//    /** 获取所有数据库中的存储对象 这边返回的是字典数组 比较当前模型 多了个ID 字段 */
+//    return  [MMJGCardMarkModel mj_objectArrayWithKeyValuesArray:[[DBSaveHelper sharedHelper]searchDBWithSql:[NSString stringWithFormat:@"select * from %@ where userId = ? and ID < ? order by ID desc limit 20 ",MM_MarkCardTableName] AndArray:@[userId, [NSString stringWithFormat:@"%ld",ID]] AndTableName:MM_MarkCardTableName]];
+////
+//}
+//
+//#pragma mark - 更新下载的内容状态 --
+//+ (void)UpDateTableWith:(MMJGCardMarkModel*)model{
+//
+//    [MMJGCardMarkModel CreateDB];
+//    /** 更新本地数据库中的内容 */
+//    //    NSRecursiveLock *lock = [[NSRecursiveLock alloc] init];
+//    //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//    //            //加锁
+//    //            [lock lock];
+//    //   [[DBSaveHelper sharedHelper]UpdataDBWithTableName:TYSX_VideoDownLoadTableName AndID:model.contentID AndModel:model];
+//    //            //解锁
+//    //            [lock unlock];
+//    //    });
+//    @synchronized([DBSaveHelper sharedHelper]){
+//        [[DBSaveHelper sharedHelper]UpdataDBWithTableName:MM_MarkCardTableName AndID:model.ID AndModel:model];
+//    }
+//}
+//
+//#pragma mark - 删除某一条记录 --
+//+ (void)DeleteTableWith:(MMJGCardMarkModel*)model{
+//
+//    [MMJGCardMarkModel CreateDB];
+//    /** 删除表中的某一条记录 */
+//    [[DBSaveHelper sharedHelper]DeleteTableWithTableName:MM_MarkCardTableName ID:model.ID];
+//}
+
+
+
+
+
+
 @end

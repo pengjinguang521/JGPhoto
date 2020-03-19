@@ -8,6 +8,8 @@
 /**
  *  该类 是对 FMDB 的封装
  *      主要是 封装一些基本的 调用办法
+ *
+ *      封装 fmdb 以及mjextension
  */
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"

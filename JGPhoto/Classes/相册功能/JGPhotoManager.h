@@ -15,7 +15,11 @@ typedef void(^JGPhotoManagerDidChoseImg)(UIImage *img);
 
 @interface JGPhotoManager : NSObject
 
-- (void)categoryViewChangeImgBtnClick;
+// 选择图片的方法
+// maxKb eg: 80000
+// imgBlock: 最后回掉的图片信息
++ (void)ChangeImgBtnClickWithImageMAXSize:(NSInteger)maxKb
+                               choseBlock:(JGPhotoManagerDidChoseImg)imgBlock;
 
 @end
 
