@@ -269,6 +269,7 @@
         if ([[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0) {
         isPhoneX = YES;
         }
+        }
         
         if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
             if (isPhoneX) {
