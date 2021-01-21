@@ -264,14 +264,18 @@
     }
     else {
         frame.origin.x = 0.0f;
+        BOOL isPhoneX = NO;
+        if (@available(iOS 11.0, *)) {
+        if ([[[UIApplication sharedApplication] delegate] window].safeAreaInsets.bottom > 0.0) {
+        isPhoneX = YES;
+        }
         
         if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
-//            if (IS_IPHONE_XS) {
-//                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f-TAR_BAR_XH;
-//            }else{
-//                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f;
-//            }
-             frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f;
+            if (isPhoneX) {
+                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f-TAR_BAR_XH;
+            }else{
+                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f;
+            }
         } else {
             frame.origin.y = 0;
         }
