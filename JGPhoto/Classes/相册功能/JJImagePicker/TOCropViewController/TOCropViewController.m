@@ -272,7 +272,7 @@
         
         if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
             if (isPhoneX) {
-                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f-TAR_BAR_XH;
+                frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f-34.0;
             }else{
                 frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f;
             }
